@@ -1,0 +1,19 @@
+page-thiccn {
+    #card-stack {
+        width: 90%;
+        height: 33em;
+        background: #EEEEEE;
+        border: 10px solid #66BB6A;
+        border-radius: 5px;
+        margin: 1.5em auto 0;
+        position: relative;
+      }
+     
+      #card-stack ion-card {
+        border-radius: 5px;
+        position: absolute;
+        text-align: center;
+        top: 3%;
+        height: 90%;
+      }
+}
