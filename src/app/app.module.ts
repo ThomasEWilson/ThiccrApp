@@ -9,6 +9,7 @@ import { AboutPage } from '../pages/about/about';
 import { ThiccnPage } from '../pages/thiccn/thiccn';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { UserPreferencesPage } from '../pages/home/userPreferences/userPreferences';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     AboutPage,
     ThiccnPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    UserPreferencesPage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import { HttpClientModule } from '@angular/common/http';
     AboutPage,
     ThiccnPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    UserPreferencesPage
   ],
   providers: [
     StatusBar,

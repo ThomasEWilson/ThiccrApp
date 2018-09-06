@@ -71,7 +71,7 @@ export class ThiccnPage implements AfterViewInit {
   voteUp(like: boolean) {
     let removedCard = this.cards.pop();
     this.addNewCards(1);
-    if (like) {
+    if (!like) {
       this.recentCard = 'You liked: ' + removedCard.email;
     } else {
       this.recentCard = 'You disliked: ' + removedCard.email;
@@ -102,14 +102,6 @@ export class ThiccnPage implements AfterViewInit {
     
     return hex;
   }
-
-
-
-
-
-
-
-
 
 }
 
