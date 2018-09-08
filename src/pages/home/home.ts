@@ -1,6 +1,6 @@
 import { UserPreferencesPage } from './userPreferences/userPreferences';
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ModalController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -8,8 +8,8 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
   items = [];
-
-  constructor(public nav: NavController) {
+																				// Injecting the controller into the constructor. Now it is available
+  constructor(public nav: NavController, public modalCtrl: ModalController) {
     this.items = [
       {
         'title': 'Customize Card',
@@ -32,8 +32,20 @@ export class HomePage {
     ];
   }
 
-  openNavDetailsPage(item) {
-    this.nav.push(UserPreferencesPage, { item: item });
+  openModal(item: any) {
+    if (item.title === 'Edit Account') {
+        const editAccountModal = this.modalCtrl.create(UserPreferencesPage, { userId: 8675309 });
+   			editAccountModal.present();
+		}
+    else if (item.title === 'Check Data') {
+        const editAccountModal = this.modalCtrl.create(UserPreferencesPage, { userId: 8675309 });
+   			editAccountModal.present();
+		}
+    else if (item.title === 'Customize Card') {
+        const editAccountModal = this.modalCtrl.create(UserPreferencesPage, { userId: 8675309 });
+   			editAccountModal.present();
+		}
+
   }
 
 }

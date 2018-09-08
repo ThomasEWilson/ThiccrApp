@@ -2,5 +2,13 @@
     <ion-navbar></ion-navbar>
 </ion-header>
 <ion-content>User Preferences {{ works }}
-    
+    <ion-item>                          
+                                        <!-- (event)="function()" -->
+                                        <!-- This is event binding syntax. Everytime something changes, 
+                                            Angular will call the onRangeValueChanged() Function. -->
+        <ion-range [(ngModel)]="rangeSliderValue" (ionChange)="onRangeValueChange()">
+            <ion-icon range-left small name="sunny"></ion-icon>
+            <ion-icon range-right name="sunny"></ion-icon>
+        </ion-range>
+      </ion-item>
 </ion-content>
